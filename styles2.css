@@ -1,0 +1,166 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #666;
+}
+
+.far-right-image {
+    margin-left: auto;
+    width: auto;
+}
+
+/* Form styles */
+.feedbackForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.feedbackForm div {
+    margin-bottom: 20px;
+}
+
+.feedbackForm label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.feedbackForm input[type="text"],
+.feedbackForm input[type="email"],
+.feedbackForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.feedbackForm input[type="radio"],
+.feedbackForm input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.feedbackForm button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedbackForm button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.feedbackForm textarea {
+    resize: vertical;
+}
+
+.satisfactionButtons button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.satisfactionButtons button:hover {
+    background-color: #555;
+}
+
+.satisfactionButtons button.selected {
+    background-color: #555;
+}
+
+/* Styles for the footer section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    margin: 5px;
+}
+
+.team-member h4 {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.team-member a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.team-member a:hover {
+    color: #bbb;
+}
+
+/* Button styles */
+.submit-button, .edit-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover, .edit-button:hover {
+    background-color: #555;
+}

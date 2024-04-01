@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Recipes</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Light gray background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the content fills at least the height of the viewport */
+        }
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #666;
+}
+
+.far-right-image {
+    margin-left: auto;
+    width: auto;
+}
+
+
+
+
+        header {
+            background-color: #444; /* Dark gray header */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        main {
+            flex-grow: 1; /* Fill remaining space */
+            display: flex;
+            flex-wrap: wrap; /* Allow recipes to wrap to new row */
+            justify-content: center;
+            align-items: flex-start; /* Align recipes to the top */
+            padding: 20px;
+        }
+
+        .recipe-box {
+            width: calc(33.33% - 40px); /* Adjust width based on number of recipes */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .recipe-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-box p {
+            margin-bottom: 10px;
+        }
+
+        .recipe-box ul {
+            margin-bottom: 10px;
+        }
+
+        .recipe-box ol {
+            margin-bottom: 10px;
+        }
+
+      
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 6px 0;
+            text-align: center;
+            font-size: 12px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .team-member {
+            margin: 5px;
+        }
+
+        .team-member h4 {
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        .team-member a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .team-member a:hover {
+            color: #bbb;
+        }
+
+        .go-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 999;
+        }
+
+        .go-to-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Healthy Eating Content</a>
+        <a href="#" class="active">Feedback</a>
+        <a href="#">Our Team</a>
+    </div>
+
+    <header>
+        <h1>Breakfast Recipes</h1>
+        <p>Start your day right with these delicious breakfast recipes!</p>
+    </header>
+
+    <main>
+        <div class="recipe-box">
+            <h2>Scrambled Eggs with Avocado Toast</h2>
+            <p>A simple and nutritious breakfast option.</p>
+            <p>Ingredients:</p>
+            <ul>
+                <li>Eggs</li>
+                <li>Avocado</li>
+                <li>Whole grain bread</li>
+                <li>Butter</li>
+                <!-- Add more ingredients as needed -->
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>Scramble the eggs in a skillet.</li>
+                <li>Toast the bread and spread avocado on top.</li>
+                <li>Serve the scrambled eggs with the avocado toast.</li>
+                <!-- Add more instructions as needed -->
+            </ol>
+        </div>
+
+        <!-- Add more recipe boxes as needed -->
+
+
+        <div class="recipe-box">
+        <h2>Oatmeal with Berries</h2>
+        <p>A hearty and healthy breakfast choice.</p>
+        <p>Ingredients:</p>
+        <ul>
+            <li>Oats</li>
+            <li>Milk or water</li>
+            <li>Fresh berries (strawberries, blueberries, raspberries)</li>
+            <li>Honey or maple syrup</li>
+            <!-- Add more ingredients as needed -->
+        </ul>
+        <p>Instructions:</p>
+        <ol>
+            <li>Cook oats according to package instructions.</li>
+            <li>Serve hot topped with fresh berries and sweeten with honey or maple syrup.</li>
+            <li>Serve hot topped with fresh berries and sweeten with honey or maple syrup.</li>
+            <!-- Add more instructions as needed -->
+        </ol>
+    </div>
+
+    <div class="recipe-box">
+        <h2>Greek Yogurt Parfait</h2>
+        <p>A light and refreshing breakfast option.</p>
+        <p>Ingredients:</p>
+        <ul>
+            <li>Greek yogurt</li>
+            <li>Granola</li>
+            <li>Fresh fruit (such as strawberries, bananas, or kiwi)</li>
+            <li>Honey or agave syrup</li>
+            <!-- Add more ingredients as needed -->
+        </ul>
+        <p>Instructions:</p>
+        <ol>
+            <li>Layer Greek yogurt, granola, and sliced fruit in a glass or bowl.</li>
+            <li>Drizzle with honey or agave syrup.</li>
+            <li>Serve chilled.</li>
+            <!-- Add more instructions as needed -->
+        </ol>
+    </div>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>This Page was worked on by:</h3>
+            <div class="team-member">
+                <h4>Aaron Madhok W1947471</h4>
+                <p><a href="johns-page-editor.html">See my page editor!</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="go-to-top" onclick="goToTop()">Go to Top</button>
+
+    <script>
+        function goToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>

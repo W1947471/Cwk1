@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Healthy Eating Content</a>
+        <a href="#" class="active">Feedback</a>
+        <a href="#">Our Team</a>
+    </div>
+
+    <h1>Feedback Form</h1>
+    <form class="feedbackForm" onsubmit="return validateForm()">
+        <div>
+            <label for="name">Enter your name: *</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter names here" required><br><br>
+        </div>
+        <div>
+            <label for="email">Enter your email: *</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter email here" required><br><br>
+        </div>
+        <div>
+            <label>Was this your first time visiting?</label><br>
+            <input type="radio" id="firstTimeYes" name="firstTime" value="Yes">
+            <label for="firstTimeYes">Yes</label>
+            <input type="radio" id="firstTimeNo" name="firstTime" value="No">
+            <label for="firstTimeNo">No</label><br><br>
+        </div>
+        <div>
+            <label>Was this website informative and easy to navigate through?</label><br>
+            <input type="radio" id="informativeYes" name="informative" value="Yes">
+            <label for="informativeYes">Yes</label>
+            <input type="radio" id="informativeNo" name="informative" value="No">
+            <label for="informativeNo">No</label><br><br>
+        </div>
+        <div>
+            <label for="improvements">If "No", suggest any improvements for the future:</label><br>
+            <textarea id="improvements" name="improvements" placeholder="Add your message here..." rows="4" cols="50"></textarea><br><br>
+        </div>
+        <div>
+            <label for="satisfaction">How satisfied are you with our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</label><br>
+            <div class="satisfactionButtons">
+                <button type="button" onclick="setSatisfaction(1)">1</button>
+                <button type="button" onclick="setSatisfaction(2)">2</button>
+                <button type="button" onclick="setSatisfaction(3)">3</button>
+                <button type="button" onclick="setSatisfaction(4)">4</button>
+                <button type="button" onclick="setSatisfaction(5)">5</button>
+                <button type="button" onclick="setSatisfaction(6)">6</button>
+                <button type="button" onclick="setSatisfaction(7)">7</button>
+                <button type="button" onclick="setSatisfaction(8)">8</button>
+                <button type="button" onclick="setSatisfaction(9)">9</button>
+                <button type="button" onclick="setSatisfaction(10)">10</button>
+            </div>
+            <input type="hidden" id="satisfaction" name="satisfaction"><br><br>
+        </div>
+        <div>
+            <label for="recommend">Would you recommend our services?</label><br>
+            <input type="radio" id="recommendYes" name="recommend" value="Yes">
+            <label for="recommendYes">Yes</label>
+            <input type="radio" id="recommendNo" name="recommend" value="No">
+            <label for="recommendNo">No</label><br><br>
+        </div>
+        <div>
+            <label>Would you like to receive updates about the website and any offers?</label><br>
+            <input type="radio" id="receiveUpdatesYes" name="receiveUpdates" value="Yes">
+            <label for="receiveUpdatesYes">Yes - via Email</label>
+            <input type="radio" id="receiveUpdatesNo" name="receiveUpdates" value="No">
+            <label for="receiveUpdatesNo">No</label><br><br>
+        </div>
+        <div>
+            <label for="additionalQuestions">Do you have any additional questions or requests?</label><br>
+            <textarea id="additionalQuestions" name="additionalQuestions" placeholder="Add your message here." rows="4" cols="50"></textarea><br><br>
+        </div>
+        <div>
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" onclick="editQuery()" class="edit-button">Edit Query</button>
+            <br><br>
+        </div>
+    </form>
+
+
+  
+
+    <footer class="footer">
+        <div class="container">
+            <h3>This Page was worked on by:</h3>
+            <div class="team-member">
+                <h4>Aaron Madhok W1947471</h4>
+                <p><a href="johns-page-editor.html">See my page editor!</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to populate form fields with previously submitted values
+        function editQuery() {
+            // Retrieve previously submitted values from local storage
+            var prevName = localStorage.getItem("feedback_name");
+            var prevEmail = localStorage.getItem("feedback_email");
+            // Populate form fields with previous values
+            document.getElementById("name").value = prevName || "";
+            document.getElementById("email").value = prevEmail || "";
+            // Other form fields can be populated similarly
+        }
+
+        // Function to validate form submission
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            if (name === "" || email === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Save form data to local storage for editing later
+            localStorage.setItem("feedback_name", name);
+            localStorage.setItem("feedback_email", email);
+            // Other form fields can be saved similarly
+
+            // Confirmation message
+            alert("Thank you for your feedback! We have received your submission.");
+
+            return true;
+        }
+    </script>
+</body>
+</html>
